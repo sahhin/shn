@@ -1,0 +1,22 @@
+<div class=" container m-auto flex flex-col h-screen p-8">
+	<app-toolbar [drawer]="drawer"></app-toolbar>
+	<main class=" flex-1 overflow-auto" style="scroll-behavior: smooth">
+		<mat-drawer-container class="h-full smooth-scroll">
+
+			<mat-drawer #drawer class="example-sidenav" mode="side">
+				<p>Auto-resizing sidenav</p>
+			</mat-drawer>
+
+			<div class="h-full">
+				<app-landing></app-landing>
+				<div class="h-full bg-gray-800" id="sect2">
+
+				</div>
+
+			</div>
+
+		</mat-drawer-container>
+	</main>
+	<app-footer></app-footer>
+
+</div>
