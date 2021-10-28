@@ -1,5 +1,10 @@
-<footer class="bg-gray-800 min-h-[30px] rounded-b-lg flex flex-row items-center justify-start px-4 gap-4">
-		<fa-icon [icon]="faAngular" class="text-red-600"></fa-icon>
-		<img src="assets/img/tailwind.svg" class="h-[24px] w-[14px]" alt="">
+<footer class="bg-gray-800 min-h-[30px] xl:rounded-b-lg flex  items-center justify-start px-4 ">
+		<div class="flex flex-auto flex-row gap-4">
+			<fa-icon [icon]="faAngular" class="text-red-600"></fa-icon>
+			<img src="assets/img/tailwind.svg" class="h-[24px] w-[14px]" alt="">
+		</div>
+	<div class="flex">
+		<span class="text-gray-500 text-sm cursor-default">{{version}}</span>
+	</div>
 </footer>
 

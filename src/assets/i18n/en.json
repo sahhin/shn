@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "start": "Start"
+  },
+  "settings": {
+    "language": {
+      "header": "Language",
+      "label": "Choose language",
+      "languages": {
+        "en": "English",
+        "de": "Deutsch",
+        "tr": "Türkçe"
+      }
+    }
+  }
+}

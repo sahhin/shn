@@ -1,1 +1,16 @@
-<app-layout></app-layout>
+<div class="xl:container xl:m-auto flex flex-col h-screen xl:p-8">
+	<app-toolbar [drawer]="drawer"></app-toolbar>
+	<main class=" flex-1 overflow-auto bg-gray-800" style="scroll-behavior: smooth">
+		<mat-drawer-container class="h-full smooth-scroll">
+
+			<mat-drawer #drawer class="example-sidenav" mode="side">
+				<p>Auto-resizing sidenav</p>
+			</mat-drawer>
+
+			<router-outlet></router-outlet>
+
+		</mat-drawer-container>
+	</main>
+	<app-footer></app-footer>
+
+</div>

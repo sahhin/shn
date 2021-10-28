@@ -10,7 +10,5 @@ var obj = {
     version: gitDescribeSync(),
     count: commitCount(),
 };
-
 const versionInfoJson = JSON.stringify(obj);
-
 writeFileSync('src/assets/version/app-version.json', versionInfoJson);

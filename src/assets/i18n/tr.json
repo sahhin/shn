@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "start": "Başlangıç"
+  },
+  "settings": {
+    "language": {
+      "header": "Dil",
+      "label": "Dil seç",
+      "languages": {
+        "en": "English",
+        "de": "Deutsch",
+        "tr": "Türkçe"
+      }
+    }
+  }
+}
