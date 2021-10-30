@@ -20,7 +20,7 @@ body {
 }
 
 .mat-drawer-content {
-    @apply smooth-scroll;
+    @apply smooth-scroll bg-gray-800;
 }
 
 ::-webkit-scrollbar{
@@ -38,4 +38,21 @@ body {
     background: #FFFFFF;
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+main {
+    position: relative;
+    & > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }

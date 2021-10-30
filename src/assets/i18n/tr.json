@@ -1,6 +1,8 @@
 {
   "navigation": {
-    "start": "Başlangıç"
+    "start": "Başlangıç",
+    "me": "Hakkımda",
+    "portfolio": "Portföy"
   },
   "settings": {
     "language": {

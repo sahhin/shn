@@ -1,6 +1,8 @@
 {
   "navigation": {
-    "start": "Start"
+    "start": "Start",
+    "me": "Me",
+    "portfolio": "Portfolio"
   },
   "settings": {
     "language": {

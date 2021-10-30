@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {SettingsComponent} from './components/home/pages/settings/settings.component';
-import {HomeComponent} from './components/home/home.component';
-import {LandingComponent} from './components/home/pages/landing/landing.component';
+import {LandingComponent} from './components/pages/landing/landing.component';
+import {SettingsComponent} from './components/pages/settings/settings.component';
+import {MeComponent} from './components/pages/me/me.component';
+import {PortfolioComponent} from './components/pages/portfolio/portfolio.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,14 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent
+  },
+  {
+    path: 'me',
+    component: MeComponent
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent
   }
 ];
 

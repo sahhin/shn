@@ -1,0 +1,37 @@
+<div class="flex-col flex-1 h-full ">
+	<div class="flex flex-col items-center h-full relative" id="sect1">
+
+		<div
+			class="z-[1] flex justify-center absolute top-0 left-0 h-1/2 w-full bg-gradient-to-b from-gray-800 shadow-2xl bg-gray-500">
+			<swiper [config]="config" #swiperComponent class="w-full">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide w-full flex flex-col flex-shrink items-center justify-center">
+						<div class="w-full flex flex-col justify-center items-center gap-4">
+							<p class="xl:text-9xl md:text-7xl text-4xl bg-black text-gray-200 transition-[font-size]">
+								Hello World
+							</p>
+							<button class="rounded-full px-4 py-1 bg-gradient-to-br from-yellow-300 to-yellow-500">
+								Jungeeee
+							</button>
+						</div>
+
+					</div>
+					<div class="swiper-slide w-full">Slide 2</div>
+					<div class="swiper-slide w-full">Slide 3</div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div [ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === usefulSwiper?.swiper?.slides?.length-1 ? 'hidden':'visible'}" class="swiper-button-next"></div>
+				<div [ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === 0 ? 'hidden':'visible'}" class="swiper-button-prev"></div>
+			</swiper>
+		</div>
+		<div
+			class="z-0 flex absolute bg-gray-500 bg-blend-hard-light bg-landing bg-cover bg-no-repeat bottom-0 h-1/2 w-full">
+			hjkhjkhjk
+		</div>
+	</div>
+	<div class="h-full bg-red-600 " style="" id="sect2">
+		landing works
+	</div>
+</div>

@@ -1,1 +1,7 @@
-<app-home></app-home>
+<div class="xl:container xl:m-auto flex flex-col h-screen xl:p-8">
+	<app-toolbar></app-toolbar>
+	<main [@fadeInOut]="outletRef.isActivated ? outletRef.activatedRoute : ''" class=" flex-1 overflow-auto bg-gray-800" style="scroll-behavior: smooth">
+		<router-outlet #outletRef="outlet"></router-outlet>
+	</main>
+	<app-footer></app-footer>
+</div>
