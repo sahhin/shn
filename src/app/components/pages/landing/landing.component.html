@@ -1,17 +1,38 @@
-<div class="flex-col flex-1 h-full ">
-	<div class="flex flex-col items-center h-full relative" id="sect1">
-
+<div class="flex flex-col flex-1 h-full ">
+	<div class="h-1/2 relative">
 		<div
-			class="z-[1] flex justify-center absolute top-0 left-0 h-1/2 w-full bg-gradient-to-b from-gray-800 shadow-2xl bg-gray-500">
-			<swiper [config]="config" #swiperComponent class="w-full">
+			class="flex justify-center absolute top-0 left-0 h-full w-full bg-gradient-to-b from-gray-800 shadow-2xl bg-gray-500">
+			<swiper [config]="config" #swiperComponent class="w-full cursor-default">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide w-full flex flex-col flex-shrink items-center justify-center">
-						<div class="w-full flex flex-col justify-center items-center gap-4">
-							<p class="xl:text-9xl md:text-7xl text-4xl bg-black text-gray-200 transition-[font-size]">
-								Hello World
+						<div class="w-auto flex flex-col justify-center items-center gap-0">
+							<span class="font-mono self-start text-green-500 font-thin uppercase text-xl md:text-4xl xl:text-6xl"
+								  style="line-height: calc(100% / 1.5)">//Informatikstudent</span>
+<!--							xl:tracking-[-13px] md:tracking-[-6px] tracking-[-3px]-->
+							<p class="z-[1] mb-4 p-4 xl:text-9xl md:text-7xl uppercase font-bold text-4xl bg-black text-gray-200 transition-[font-size]">
+								Şahin Tekeş
 							</p>
-							<button class="rounded-full px-4 py-1 bg-gradient-to-br from-yellow-300 to-yellow-500">
-								Jungeeee
+						</div>
+
+						<div class="flex flex-row justify-center w-3/4 flex-wrap gap-4">
+							<button class="border border-yellow-500 text-xs md:text-sm text-gray-800 flex rounded-full px-4 py-1 bg-gradient-to-br from-yellow-300 to-yellow-500 hover:drop-shadow-mail transition duration-500">
+								<fa-icon [icon]="faEnvelope" class="flex self-center text-gray-800 pr-1 drop-shadow-icon_logo_white"></fa-icon>
+								<span class="drop-shadow-icon_logo_white">E-Mail</span>
+							</button>
+							<button
+								class="border border-[#171515] text-xs md:text-sm flex rounded-full px-4 py-1 bg-gradient-to-br to-[#534c4c] from-[#171515] hover:drop-shadow-github transition duration-500 text-gray-300">
+								<fa-icon [icon]="faGithub" class="flex self-center text-gray-300 pr-1 drop-shadow-icon_logo_dark"></fa-icon>
+								<span class="drop-shadow-icon_logo_dark">@sahhin</span>
+							</button>
+							<button
+								class="border border-[#1DA1F2] ease-in-out text-xs md:text-sm flex items-center rounded-full px-4 py-1 bg-gradient-to-br to-[#075280] from-[#1DA1F2]  hover:drop-shadow-twitter transition duration-500 text-gray-300">
+								<fa-icon [icon]="faTwitter" class="flex self-center text-gray-300 pr-1 drop-shadow-icon_logo_dark"></fa-icon>
+								<span class="drop-shadow-icon_logo_dark">@the_sahining</span>
+							</button>
+							<button
+								class="border border-[#5662f6] text-xs md:text-sm flex rounded-full px-4 py-1 bg-gradient-to-br to-[#08139d] from-[#5662f6] hover:drop-shadow-discord transition duration-500 text-gray-300">
+								<fa-icon [icon]="faDiscord" class="flex self-center text-gray-300 pr-1 drop-shadow-icon_logo_dark"></fa-icon>
+								<span class="drop-shadow-icon_logo_dark">Discord</span>
 							</button>
 						</div>
 
@@ -22,16 +43,23 @@
 				<!-- Add Pagination -->
 				<div class="swiper-pagination"></div>
 				<!-- Add Arrows -->
-				<div [ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === usefulSwiper?.swiper?.slides?.length-1 ? 'hidden':'visible'}" class="swiper-button-next"></div>
-				<div [ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === 0 ? 'hidden':'visible'}" class="swiper-button-prev"></div>
+				<div
+					[ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === usefulSwiper?.swiper?.slides?.length-1 ? 'hidden':'visible'}"
+					class="swiper-button-next"></div>
+				<div [ngStyle]="{'visibility': usefulSwiper?.swiper?.activeIndex === 0 ? 'hidden':'visible'}"
+					 class="swiper-button-prev"></div>
 			</swiper>
 		</div>
-		<div
-			class="z-0 flex absolute bg-gray-500 bg-blend-hard-light bg-landing bg-cover bg-no-repeat bottom-0 h-1/2 w-full">
-			hjkhjkhjk
+	</div>
+
+	<div class="h-1/2 relative">
+		<div class="w-full h-full bg-gradient-to-b from-gray-500 shadow-2xl bg-gray-800">
+			<img src="assets/img/landing.png"  class="pixelated w-full h-full mix-blend-screen object-cover" alt="Who dis?">
+			<!--			<div class="absolute top-0 items-center justify-start flex h-1/2 w-full h-full ">-->
+			<!--				<p class="h-full text-7xl p-8 uppercase font-bold text-gray-800">Şahin Tekeş</p>-->
+			<!--			</div>-->
 		</div>
 	</div>
-	<div class="h-full bg-red-600 " style="" id="sect2">
-		landing works
-	</div>
 </div>
+
+

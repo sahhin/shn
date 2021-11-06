@@ -22,6 +22,7 @@ import {SettingsComponent} from './components/pages/settings/settings.component'
 import {PortfolioComponent} from './components/pages/portfolio/portfolio.component';
 import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
 import {MatButtonModule} from '@angular/material/button';
+import {NgxPopperjsModule} from 'ngx-popperjs';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -51,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         MatFormFieldModule,
         MatSelectModule,
         MatOptionModule,
+        NgxPopperjsModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

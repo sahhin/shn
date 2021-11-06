@@ -1,10 +1,37 @@
 <footer class="bg-gray-800 min-h-[30px] xl:rounded-b-lg flex  items-center justify-start px-4 ">
-		<div class="flex flex-auto flex-row gap-4">
-			<fa-icon [icon]="faAngular" class="text-red-600"></fa-icon>
-			<img src="assets/img/tailwind.svg" class="h-[24px] w-[14px]" alt="">
-		</div>
+	<div class="flex flex-auto flex-row gap-4">
+		<fa-icon
+			[popper]="angularPopper"
+			[popperTrigger]="NgxPopperjsTriggers.hover"
+			[popperHideOnClickOutside]="false"
+			[popperStyles]="{'background-color': '#dc2626'}"
+			[popperPlacement]="NgxPopperjsPlacements.TOP"
+			[icon]="faAngular" class="text-red-600"></fa-icon>
+		<img
+			[popper]="tailwindPopper"
+			[popperTrigger]="NgxPopperjsTriggers.hover"
+			[popperHideOnClickOutside]="false"
+			[popperStyles]="{'background-color': '#07b6d5'}"
+			[popperPlacement]="NgxPopperjsPlacements.TOP"
+			src="assets/img/logos/tailwind.svg" class="h-[24px] w-[14px]" alt="">
+	</div>
 	<div class="flex">
-		<span class="text-gray-500 text-sm cursor-default">{{version}}</span>
+		<span
+			[popper]="versionPopper"
+			[popperTrigger]="NgxPopperjsTriggers.hover"
+			[popperHideOnClickOutside]="false"
+			[popperStyles]="{'background-color': 'gray'}"
+			[popperPlacement]="NgxPopperjsPlacements.TOP"
+			class="text-gray-600 font-mono text-xs cursor-default">{{version}}</span>
 	</div>
 </footer>
-
+<popper-content class="bg-red-500" #angularPopper>
+	<p class="text-xs">Angular v12.2.3</p>
+</popper-content>
+<popper-content #tailwindPopper>
+	<p class="text-xs">Tailwind CSS v2.2.17</p>
+</popper-content>
+<popper-content #versionPopper>
+	<p class="text-xs">Version: {{version}}</p>
+	<p class="text-xs">Letzte Änderung: {{lastChange | date: 'dd.MM.yyyy, HH:mm'}} Uhr.</p>
+</popper-content>

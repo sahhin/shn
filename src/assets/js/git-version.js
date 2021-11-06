@@ -5,10 +5,10 @@ const {gitDescribeSync} = require('git-describe');
 const commitCount = require('git-commit-count');
 const {writeFileSync} = require('fs');
 const gitInfo = gitDescribeSync();
-
 var obj = {
     version: gitDescribeSync(),
     count: commitCount(),
+    date: new Date()
 };
 const versionInfoJson = JSON.stringify(obj);
 writeFileSync('src/assets/version/app-version.json', versionInfoJson);

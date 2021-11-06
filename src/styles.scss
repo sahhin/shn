@@ -2,45 +2,77 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~ngx-popperjs/scss/theme-dark';
 
 @layer utilities {
     .smooth-scroll {
         scroll-behavior: smooth;
     }
+
+    .pixelated {
+        image-rendering: pixelated;
+    }
 }
+
 html, body {
     height: 100%;
     scroll-behavior: smooth;
     @apply dark:bg-gray-600
 }
 
+:root{
+    --swiper-navigation-size: 25px !important;
+    --swiper-theme-color: white !important;
+}
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    border-radius: 0 !important;
+    background: white;
+    width: 20px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: 0 !important;
+    height: 100% !important;
+    margin-top: 0 !important;
+    width: calc(var(--swiper-navigation-size) / 44 * 100) !important;
+}
+
+.swiper-pagination-bullet{
+    transition: all .75s ease-in-out;
 }
 
 .mat-drawer-content {
     @apply smooth-scroll bg-gray-800;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #A8A6A8;
     border-radius: 0px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #878587;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: #FFFFFF;
     border-radius: 0px;
     box-shadow: inset 0px 0px 0px 0px #F0F0F0;
 }
+
 main {
     position: relative;
+
     & > * {
         position: absolute;
         top: 0;
@@ -52,6 +84,7 @@ main {
         justify-content: center;
     }
 }
+
 .btn:focus {
     outline: none;
     box-shadow: none;
